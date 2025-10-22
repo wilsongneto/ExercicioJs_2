@@ -1,3 +1,19 @@
+//Exercício 1
+//Dados iniciais da viagem
+const distanciaKm = 200;
+const consumoKmL = 40;
+const precoL = 6.70;
+
+//Calcular quantidade de litros necessário
+const totalLitros = distanciaKm / consumoKmL;
+//Calcular custo total
+const consumoTotal = consumoKmL * precoL;
+const custoTotalArr = Math.round(consumoTotal*100) /100;
+
+//Mostrar resultado
+// console.log(`O carro com ${distanciaKm.toFixed(2)} Km, fez ${totalLitros} Km/l. E gastou R$${consumoTotal.toFixed(2)}`);
+console.log(`Resumo da viagem: Distância: ${distanciaKm} km. Consumo do veículo: ${consumoKmL} km/l. Preço do combustível: R$ ${custoTotalArr.toFixed(2)}`);
+
 //Exercício 3
 
 const numeroParaVerificar = 12;
