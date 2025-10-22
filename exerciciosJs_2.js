@@ -14,6 +14,27 @@ const custoTotalArr = Math.round(consumoTotal*100) /100;
 // console.log(`O carro com ${distanciaKm.toFixed(2)} Km, fez ${totalLitros} Km/l. E gastou R$${consumoTotal.toFixed(2)}`);
 console.log(`Resumo da viagem: Distância: ${distanciaKm} km. Consumo do veículo: ${consumoKmL} km/l. Preço do combustível: R$ ${custoTotalArr.toFixed(2)}`);
 
+//Exercício 2
+// Classificador de triângulos
+const ladoA = 10;
+const ladoB = 10;
+const ladoC = 60;
+//condição da existência do triângulo
+if(ladoA + ladoB > ladoC && ladoA + ladoC > ladoB && ladoB + ladoC > ladoA) {
+    console.log("Os lados podem formar um triângulo")
+ 
+//condicionais aninhadas
+    if(ladoA === ladoB && ladoB === ladoC) {
+        console.log("O triângulo é equilátero")
+    } else if (ladoA === ladoB || ladoB === ladoC || ladoA === ladoC) {
+        console.log("O triângulo é isóceles")
+    } else {
+        console.log("O triângulo é escaleno")
+    }
+} else {
+    console.log("Os lados não podem formar um triângulo")
+ }
+
 //Exercício 3
 
 const numeroParaVerificar = 12;
