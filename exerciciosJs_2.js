@@ -60,3 +60,43 @@ if(numPrimo) {
 } else {
     console.log(`${numeroParaVerificar} não é primo`)
 }
+
+
+// //Exercício 4
+// //Análise de turma
+// //Array de objeto com nome e nota do aluno
+// //1-Calcular a média de nota da turma
+// //2-Exibir nome do aluno com maior nota
+// //3-Array com nome dos alunos aprovados(>=7)
+const turma = [
+    {nome: 'Ana', nota: 8},
+    {nome: 'Carla', nota: 7},
+    {nome: 'Miguel', nota: 9},
+    {nome: 'Marcio', nota: 7},
+    {nome: 'João', nota: 6}
+];
+
+let somaDasNotas = 0;
+let alunoMelhorNota = turma[0];
+const alunosAprovados = [];
+
+for(let i = 0; i < turma.length; i++) {
+    const aluno = turma[i];
+
+    console.log("....", aluno);
+    somaDasNotas += aluno.turma;
+
+    if(aluno.nota > alunoMelhorNota.nota) {
+        alunoMelhorNota = aluno;
+    }
+
+    if(aluno.nota >= 7) {
+        alunosAprovados.push(aluno.nome);
+    }
+}
+
+const mediaDaTurma = somaDasNotas / turma.length;
+
+console.log(`A média de notas da turma é: ${mediaDaTurma.toFixed(2)}`)
+console.log(`O aluno com maior nota é: ${alunoMelhorNota.nome}(nota ${alunoMelhorNota.nota}).`)
+console.log(`Os alunos aprovados são: ${alunosAprovados}`);
